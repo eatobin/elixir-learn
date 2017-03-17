@@ -10,3 +10,5 @@ fizz_buzz = fn
   (_, 0, _) -> "Buzz"
   (_, _, x) -> x
 end
+
+fizzy = fn (x) -> fizz_buzz.(rem (x,3), rem (x, 5), 10)
