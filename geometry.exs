@@ -21,3 +21,9 @@ defmodule Square do
     Rectangle.perimeter({w, w})
   end
 end
+
+r = {3, 4}
+IO.puts "The area of rectangle #{inspect r} is #{Rectangle.area r}"
+
+s = {4}
+IO.puts "The area of square #{inspect s} is #{Square.area s}"
