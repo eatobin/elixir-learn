@@ -18,3 +18,5 @@ fizzy = fn x -> fizz_buzz.(rem(x, 3), rem(x, 5), x) end
 IO.inspect Enum.map(10..16, fizzy)
 
 add_n = fn n -> (fn other -> n + other end) end
+
+add_n2 = fn n -> (fn other -> n + other end) end
