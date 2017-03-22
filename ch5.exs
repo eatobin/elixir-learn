@@ -24,3 +24,11 @@ add_n2 = fn n ->
     n + other
   end
 end
+
+prefix = fn xs1 ->
+  fn xs2 ->
+    x1 ++ ' ' ++ xs2
+  end
+end
+
+# iex> mrs = prefix.("Mrs") #Function<erl_eval.6.82930912> iex> mrs.("Smith") "Mrs Smith" iex> prefix.("Elixir").("Rocks") "Elixir Rocks"
