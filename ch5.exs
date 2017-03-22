@@ -19,4 +19,8 @@ IO.inspect Enum.map(10..16, fizzy)
 
 add_n = fn n -> (fn other -> n + other end) end
 
-add_n2 = fn n -> (fn other -> n + other end) end
+add_n2 = fn n ->
+  fn other ->
+    n + other
+  end
+end
