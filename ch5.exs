@@ -27,7 +27,7 @@ end
 
 prefix = fn xs1 ->
   fn xs2 ->
-    xs1 <> ' ' <> xs2
+    xs1 <> " " <> xs2
   end
 end
 
