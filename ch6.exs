@@ -21,3 +21,13 @@ defmodule MyLen do
   def mLen([]), do: 0
   def mLen([_ | t]), do: 1 + mLen(t)
 end
+
+defmodule MySum do
+  def mSum(0), do: 0
+  def mSum(n), do: n + mSum(n-1)
+end
+
+defmodule GCD do
+  def gcd(x,0), do: x
+  def gcd(x,y), do: gcd(y,rem(x,y))
+end
