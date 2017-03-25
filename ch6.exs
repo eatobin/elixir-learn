@@ -9,7 +9,7 @@ end
 
 defmodule Factorial do
   def of(0), do: 1
-  def of(n), do: n * of(n-1)
+  def of(n) when n > 0, do: n * of(n-1)
 end
 
 defmodule MyLen do
@@ -33,4 +33,17 @@ defmodule Guard do
   end
   def what_is(x) when is_list(x), do: IO.puts "#{inspect(x)} is a list"
   def what_is(x) when is_atom(x), do: IO.puts "#{x} is an atom"
+end
+
+defmodule Example do
+  def func(p1, p2 \\ 2, p3 \\ 3, p4) do
+    IO.inspect [p1, p2, p3, p4]
+  end
+end
+
+defmodule Params do
+  def func(p1, p2 \\ 123)
+  def func(_, p2) when p2 == 99, do: IO.puts "you said 99"
+  def func(_, p2) when p2 == 123, do: IO.puts "oh... you said 123"
+  def func(p1, p2), do: IO.inspect [p1, p2]
 end
