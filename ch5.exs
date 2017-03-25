@@ -32,3 +32,7 @@ prefix = fn xs1 ->
 end
 
 # iex> mrs = prefix.("Mrs") #Function<erl_eval.6.82930912> iex> mrs.("Smith") "Mrs Smith" iex> prefix.("Elixir").("Rocks") "Elixir Rocks"
+
+plus_2 = Enum.map [1,2,3,4], &(&1 + 2)
+
+inspect_it = Enum.map [1,2,3,4], &(IO.inspect &1)
