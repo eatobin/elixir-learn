@@ -64,3 +64,11 @@ defmodule Chop do
     guess(x, n..b)
   end
 end
+
+defmodule Pipes do
+  def pipe_it do
+    (1..10)
+    |> Enum.map(&(&1*&1))
+    |> Enum.filter(&(&1 < 40))
+  end
+end
