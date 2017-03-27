@@ -47,3 +47,20 @@ defmodule Params do
   def func(_, p2) when p2 == 123, do: IO.puts "oh... you said 123"
   def func(p1, p2), do: IO.inspect [p1, p2]
 end
+
+defmodule Chop do
+  def guess(x, a..b) when x == div(a+b, 2) do
+    IO.puts "Is it #{x}"
+    IO.puts "#{x}"
+  end
+  def guess(x, a..b) when x < div(a+b, 2) do
+    n = div(a+b, 2)
+    IO.puts "Is it #{n}"
+    guess(x, a..n)
+  end
+  def guess(x, a..b) when x > div(a+b, 2) do
+    n = div(a+b, 2)
+    IO.puts "Is it #{n}"
+    guess(x, n..b)
+  end
+end
