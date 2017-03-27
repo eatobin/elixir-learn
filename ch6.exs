@@ -72,3 +72,27 @@ defmodule Pipes do
     |> Enum.filter(&(&1 < 40))
   end
 end
+
+defmodule Example do
+  def func1, do: List.flatten [1,[2,3],4]
+  def func2 do
+    import List, only: [flatten: 1]
+    flatten [5,[6,7],8]
+  end
+end
+
+defmodule Attrib do
+  @attr "one"
+  def first, do: @attr
+  @attr "two"
+  def second, do: @attr
+end
+
+# :io.format("The number is ~3.1f~n", [5.678])
+# :io.format("~4.2f~n", [5.678])
+# System.cwd()
+# Path.extname("dave/test.exs")
+# https://github.com/devinus/poison
+# System.cmd("ls", [])
+# System.cmd("ls", ["-a"])
+# System.cmd("ls", ["-ap"])
