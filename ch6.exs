@@ -14,7 +14,7 @@ end
 
 defmodule MyLen do
   def mLen([]), do: 0
-  def mLen([_ | t]), do: 1 + mLen(t)
+  def mLen([ _ | t ]), do: 1 + mLen(t)
 end
 
 defmodule MySum do
