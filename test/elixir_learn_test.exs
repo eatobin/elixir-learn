@@ -1,6 +1,8 @@
+ExUnit.start
+
 defmodule ElixirLearnTest do
-  use ExUnit.Case
-  doctest ElixirLearn
+
+  use ExUnit.Case, async: true
 
   test "the truth" do
     assert 1 + 1 == 2

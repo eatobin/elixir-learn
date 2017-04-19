@@ -1,4 +1,4 @@
-defmodule ElixirLearn do
+defmodule ElixirLearnX do
   @moduledoc """
   Documentation for ElixirLearn.
   """
