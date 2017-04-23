@@ -29,5 +29,5 @@ end
 
 # iex(6)> Report.get_best_move([1])
 # 1
-# iex(7)> Report.get_best_move([1,2,3])        
+# iex(7)> Report.get_best_move([1,2,3])
 # [2, 3]
