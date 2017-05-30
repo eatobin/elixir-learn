@@ -1,0 +1,23 @@
+r = "Rickey"
+n = "Nate"
+red = [IO.ANSI.red, r]
+red2 = [IO.ANSI.red, r, IO.ANSI.reset]
+norm = [IO.ANSI.blue, n]
+IO.puts red
+IO.puts norm
+IO.puts ["My name is ", red, " and my name is ", norm]
+IO.puts ["My name is ", red2, " and my name is ", norm]
+redX = [IO.ANSI.red, "X", IO.ANSI.reset]
+blueO = [IO.ANSI.blue, "O", IO.ANSI.reset]
+IO.write("  0   1   2\n ===+===+=== \n  3   "<> IO.ANSI.blue <> "4   5\n ===+===+=== \n  6   7   8\n" <> IO.ANSI.green <> " Bye!\n")
+IO.write(["  0   1   2\n ===+===+=== \n  3   ", redX, "   5\n ===+===+=== \n  6   7   8\n"])
+IO.write(["  ", redX, "   ", redX, "   ", redX, "\n ===+===+=== \n  ", redX, "   ", redX, "   ", redX, "\n ===+===+=== \n  ", redX, "   ", redX, "   ", redX, "\n"])
+Enum.filter(["  ", redX, "   ", redX, "   ", redX, "\n ===+===+=== \n  ", redX, "   ", redX, "   ", redX, "\n ===+===+=== \n  ", redX, "   ", redX, "   ", redX, "\n"], fn(x) -> x != redX end)
+Enum.map(["  ", 0, "   ", redX, "   ", redX, "\n ===+===+=== \n  ", redX, "   ", redX, "   ", redX, "\n ===+===+=== \n  ", redX, "   ", redX, "   ", redX, "\n"], fn(x) -> if x == 0 do blueO else x end end)
+o = fn(x) -> if x == 1 do x else "ET" end end
+IO.write(Enum.map(["  ", redX, "   ", redX, "   ", redX, "\n ===+===+=== \n  ", redX, "   ", 0, "   ", redX, "\n ===+===+=== \n  ", redX, "   ", redX, "   ", redX, "\n"], fn(x) -> if x == 0 do blueO else x end end))
+board = ["  ", redX, "   ", redX, "   ", redX, "\n ===+===+=== \n  ", redX, "   ", 0, "   ", redX, "\n ===+===+=== \n  ", redX, "   ", redX, "   ", redX, "\n"]
+f = fn(x) -> if x == 0 do blueO else x end end
+c_board = Enum.map(board, f)
+IO.write(c_board)
+new_board = List.replace_at(board, move, [IO.ANSI.red, symbol, IO.ANSI.reset])
