@@ -18,7 +18,7 @@ end
 # dbl = fn n -> n * 2 end
 # trp = fn n -> n * 3 end
 
-# Question.consumer([1, 2, 3], &Question.dbl/1)   # => [2]
+# Question.consumer([1, 2, 3], &Question.dbl/1)   # => [3]
 # Question.consumer([1, 2, 3], &Question.trp/1)   # => [2, 3]
 
 # Question.consumer([1, 2, 3], dbl)   # => [3]
