@@ -6,7 +6,7 @@ defmodule MyList do
   def len([_head | tail]), do: 1 + len(tail)
 
   def square([]), do: []
-  def square([head | tail]), do: [head * head] | square(tail)]
+  def square([head | tail]), do: [head * head | square(tail)]
 end
 
 
