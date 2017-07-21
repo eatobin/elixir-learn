@@ -18,9 +18,15 @@ defmodule MyList do
   def sum([head | tail], total), do: sum(tail, head + total)
 
   def sum_p(list), do: _sum_p(list, 0)
-
   defp _sum_p([], total), do: total
   defp _sum_p([head | tail], total), do: _sum_p(tail, head + total)
+
+  def reduce([], accum, _) do
+    accum
+  end
+  def reduce([head | tail], accum, func) do
+    reduce(tail, func.(head, accum), func)
+  end
 end
 
 
