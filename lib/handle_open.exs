@@ -3,5 +3,5 @@ handle_open = fn
   {_, error} -> "Error: #{:file.format_error(error)}"
 end
 
-IO.puts handle_open.(File.open("simple.exs"))
-IO.puts handle_open.(File.open("nope"))
+IO.puts(handle_open.(File.open("simple.exs")))
+IO.puts(handle_open.(File.open("nope")))

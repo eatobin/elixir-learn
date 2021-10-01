@@ -1,7 +1,6 @@
-ExUnit.start
+ExUnit.start()
 
 defmodule ElixirLearnTest do
-
   use ExUnit.Case, async: true
 
   test "the truth" do

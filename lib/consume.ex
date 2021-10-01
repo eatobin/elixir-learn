@@ -1,12 +1,13 @@
 defmodule Question do
-
   @moduledoc """
   This is the Library module.
   """
 
   def dbl(n), do: n * 2
 
-  def trp(n) do n * 3 end
+  def trp(n) do
+    n * 3
+  end
 
   def consumer(list, f) do
     # Enum.filter(list, fn x -> f.(x) > 5 end)
