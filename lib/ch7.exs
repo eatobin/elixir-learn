@@ -24,11 +24,11 @@ defmodule MyList do
   def reduce([], accum, _) do
     accum
   end
+
   def reduce([head | tail], accum, func) do
     reduce(tail, func.(head, accum), func)
   end
 end
-
 
 defmodule Speak do
   def greet({:formal, first_name, last_name}) do
@@ -41,11 +41,11 @@ defmodule Speak do
 end
 
 defmodule Report do
-  def get_best_move([first|[]]) do
+  def get_best_move([first | []]) do
     first
   end
 
-  def get_best_move([_first|rest]) do
+  def get_best_move([_first | rest]) do
     rest
   end
 end
